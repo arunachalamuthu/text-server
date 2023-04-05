@@ -103,9 +103,13 @@ router.get('/vercel-test',(req,res)=>{
 
 router.post('/search', search2)
 
-router.post('/loginPage',(req,res)=>{
+router.post('/loginPage',async(req,res)=>{
 
-  res.json({ID:req.body.ID,Password:req.body.Password})
+  const check = await postDetails.findOne({ ID:req.body.ID, Password: req.body.Password })
+
+  res.json(check)
+  // res.json({ID:req.body.ID,Password:req.body.Password})
+
 })
 
 router.get('/loginPage/:name&&:Password', async (req, res) => {
