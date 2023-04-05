@@ -105,11 +105,15 @@ router.post('/search', search2)
 
 
 router.get('/loginPage/:name&&:Password', async (req, res) => {
-  res.json({user:'login'})
-  // const ID = req.params.name
-  // const Password = req.params.Password
-  // const check = await postDetails.findOne({ ID: ID, Password: Password })
-  // // console.log(check);
+ 
+  const ID = req.params.name
+  const Password = req.params.Password
+  const check = await postDetails.findOne({ ID: ID, Password: Password })
+  // console.log(check);
+  if(check)
+  {
+    res.json({user:'login'})
+  }
   // if (check) {
   //   res.json({ message: check })
   // }
