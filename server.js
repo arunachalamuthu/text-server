@@ -27,7 +27,7 @@ db.on('error',(error)=>console.log(error))
 db.once('open',()=>console.log('connect the database'))
 
 app.get('check',(req,res)=>{
-  res.send('work')
+  res.send({user:'hi'})
 })
 app.use(express.static('public'))
 let imagename=''
