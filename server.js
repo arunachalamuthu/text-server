@@ -17,9 +17,9 @@ const app =express()
 app.use(express.json())
 app.use(cors())
 
+// avTsmn6Q0PgS49Zv
 
-
-mongoose.connect('mongodb+srv://muthu:muthu17@cluster0.jp1wrus.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://chat:avTsmn6Q0PgS49Zv@chat-vercel.yetho7g.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 
 const db =mongoose.connection
 
