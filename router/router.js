@@ -103,6 +103,10 @@ router.get('/vercel-test',(req,res)=>{
 
 router.post('/search', search2)
 
+router.post('/loginPage',(req,res)=>{
+
+  res.json({ID:req.body.ID,Password:req.body.Password})
+})
 
 router.get('/loginPage/:name&&:Password', async (req, res) => {
  
