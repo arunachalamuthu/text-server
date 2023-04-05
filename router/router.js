@@ -113,7 +113,7 @@ router.get('/frontpage/:ID', async (req, res) => {
 
 router.post('/frontpage', async (req, res) => {
 
-  const find = await postDetails.findOne({ ID: req.body.ID })
+  const find = await postDetails.findOne({ ID: req.body.search })
 
   if (find) {
     const { FriendID } = find
