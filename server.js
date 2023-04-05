@@ -26,7 +26,9 @@ const db =mongoose.connection
 db.on('error',(error)=>console.log(error))
 db.once('open',()=>console.log('connect the database'))
 
-
+app.get('check',(req,res)=>{
+  res.send('work')
+})
 app.use(express.static('public'))
 let imagename=''
 let upload=multer({
