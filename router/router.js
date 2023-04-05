@@ -8,7 +8,7 @@ import { search2 } from '../components/search2.js'
 // import { upload } from '../components/upload.js'
 import { newmessage } from '../components/newmessage.js'
 import { message } from '../components/message.js'
-
+import cors from 'cors'
 
 import { fileURLToPath } from 'url';
 import path from 'path'
@@ -19,6 +19,7 @@ const __dirname = dirname(__filename);
 
 const router = express()
 
+router.use(cors())
 // router.use(express.static(path.join(__dirname,'../public')))
 
 // router.get('/chat/:mycode&&:Friendcode', text)
@@ -73,7 +74,9 @@ router.get('/frontpage/:ID', async (req, res) => {
 })
 
 
-
+router.get('/vercel-test',(req,res)=>{
+  res.send({user:'vercel'})
+})
 
 
 // router.get('/image',(req,res)=>{
